@@ -34,7 +34,7 @@ details.dialog[open] > summary:before {
 
 details.dialog[open] > details-dialog{
   animation-name: expandin;
-  animation-duration: 3s;
+  animation-duration: 1s;
 }
 
 details-dialog{
@@ -73,11 +73,6 @@ details-dialog footer{
   text-align: right;
 }
 
-summary div.test-large{
-  height: 10em;
-  background: green;
-}
-
 @keyframes expandin {
   from {
     /*width: 10em;*/
@@ -89,3 +84,154 @@ summary div.test-large{
     opacity: 1;
   }
 }
+
+@keyframes grow-left {
+  from {
+    /*width: 10em;*/
+    /*height: 10em;*/
+    width: 0px;
+    height: 0px;
+  }
+
+  to{
+  }
+}
+
+@keyframes slide-down {
+  from {
+    /*width: 10em;*/
+    /*height: 10em;*/
+    height: 0px;
+  }
+
+  to{
+  }
+}
+
+/* Extra Styling */
+
+
+summary div.test-large{
+  height: 10em;
+  background: green;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  background: rgba(77, 68, 109, .500);
+}
+
+nav ul.app-navigation li{
+  display: inline-block;
+}
+
+nav .user-settings{
+  display: inline-block;
+}
+
+nav .user-settings summary img{
+  width: 3em;
+}
+
+body{
+  margin: 0;
+}
+
+body > main{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+
+figure img{
+  height: 300px;
+}
+
+/* Menubar */
+
+details.menu  > summary{
+  list-style: none;
+  cursor: pointer;
+}
+
+details-menu {
+  background-color: rgba(77, 68, 109, 1.00);
+  color: rgba(255,255,255,.7);
+  height: 10em;
+  position: absolute;
+  left: auto;
+  right: 0;
+}
+
+details.menu[open] > details-menu{
+  animation-name: slide-down;
+  animation-duration: 1s;
+}
+
+
+/* Popover */
+
+details.popover{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+details.popover  > summary{
+  list-style: none;
+  font-family: sans-serif;
+  font-size: .5em;
+  color: rgba(77, 68, 109, 1.00);
+  text-decoration: underlinel;
+  cursor: pointer;
+}
+
+details-popover{
+  position: absolute;
+  background: white;
+  border: 1px solid grey;
+
+  left: 100%;
+  margin-left: 10px;
+  margin-top: 0;
+  right: auto;
+  top: 0;
+  width: auto;
+
+  box-shadow:         0px 0px 5px 6px rgba(68,68,68,0.1);
+}
+
+
+.jeff details-popover{
+  width: 50vw;
+  top: -10vh;
+  margin-bottom: 1em;
+}
+
+.jeff details-popover h2{
+  background: rgba(77, 68, 109, .500);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.jeff details-popover img{
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: auto;
+}
+
+.jeff p{
+  font-size: initial;
+}
+
+details.popover[open] > details-popover{
+  animation-name: grow-left;
+  animation-duration: 0.3s;
+}
+/*
+details.popover:not([open]) > details-popover{
+  animation-name: expandin;
+  animation-duration: 0.3s;
+}*/
