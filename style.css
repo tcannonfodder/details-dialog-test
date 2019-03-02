@@ -1,0 +1,91 @@
+/* This lives outside of element so it can work without JS */
+/* Base styling */
+details-dialog {
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: 448px;
+}
+
+details.dialog[open]{
+
+}
+
+details.dialog > summary{
+  list-style: none;
+}
+
+details.dialog[open] > summary:before {
+  content: " ";
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+details.dialog[open] > details-dialog{
+  animation-name: expandin;
+  animation-duration: 3s;
+}
+
+details-dialog{
+  background: white;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+details-dialog  main{
+  padding: 1em;
+}
+
+details-dialog header, details-dialog footer{
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+details-dialog header{
+  padding-bottom: 0.5em;
+  border-bottom: rgba(77, 68, 109, 1.000);
+
+  background: rgba(77, 68, 109, 1.000);
+  color: rgba(255,255,255,.7);
+}
+
+details-dialog header button[data-close-dialog]{
+  position: relative;
+  right: 0;
+}
+
+details-dialog footer{
+  background: #dedbe8;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
+  text-align: right;
+}
+
+summary div.test-large{
+  height: 10em;
+  background: green;
+}
+
+@keyframes expandin {
+  from {
+    /*width: 10em;*/
+    /*height: 10em;*/
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <!-- <script type="module" src="details-dialog-element.esm.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <details class='dialog' open>
+    <summary><div class='test-large'><button>Open this dialog!</button></div></summary>
+    <details-dialog>
+      <form method="get">
+        <header>
+          This is a new modal dialog!
+          <button type="button" data-close-dialog>X</button>
+        </header>
+        <main>
+          <p>Captain, why are we out here chasing comets? The Federation's gone; the Borg is everywhere! I'll alert the crew. Ensign Babyface! Worf, It's better than music. It's jazz. I suggest you drop it, Mr. Data. When has justice ever been as simple as a rule book? I'd like to think that I haven't changed those things, sir. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation. Travel time to the nearest starbase? This should be interesting. What? We're not at all alike! Commander William Riker of the Starship Enterprise. Computer, belay that order. Our neural pathways have become accustomed to your sensory input patterns. They were just sucked into space. Computer, lights up! Now, how the hell do we defeat an enemy that knows us better than we know ourselves?</p>
+
+          <label for="name">Your Name:</label>
+          <input name="person" placeholder="Grace Hopper"></form>
+        </main>
+        <footer>
+          <button type="submit">Submit this form!</button>
+        </footer>
+      </form>
+    </details-dialog>
+  </details>
+</body>
+</html>
