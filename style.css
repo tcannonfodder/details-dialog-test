@@ -162,6 +162,10 @@ figure img{
   height: 300px;
 }
 
+details.popover.dynamically-loaded > summary{
+  font-size: inherit;
+}
+
 /* Menubar */
 
 details.menu  > summary{
@@ -190,6 +194,12 @@ details.popover{
   display: inline-block;
   vertical-align: middle;
   position: relative;
+}
+
+details.popover.loading details-popover{
+  min-width: 10vw;
+  height: 10vw;
+  background: green;
 }
 
 details.popover  > summary{
