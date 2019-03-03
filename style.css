@@ -85,6 +85,18 @@ details-dialog footer{
   }
 }
 
+@keyframes fadeout {
+  from {
+    /*width: 10em;*/
+    /*height: 10em;*/
+    opacity: 1;
+  }
+
+  to{
+    opacity: 0;
+  }
+}
+
 @keyframes grow-left {
   from {
     /*width: 10em;*/
@@ -128,10 +140,12 @@ nav ul.app-navigation li{
 
 nav .user-settings{
   display: inline-block;
+  margin-right: 1em;
 }
 
 nav .user-settings summary img{
   width: 3em;
+  border-radius: 100%;
 }
 
 body{
@@ -230,8 +244,3 @@ details.popover[open] > details-popover{
   animation-name: grow-left;
   animation-duration: 0.3s;
 }
-/*
-details.popover:not([open]) > details-popover{
-  animation-name: expandin;
-  animation-duration: 0.3s;
-}*/
